@@ -7,6 +7,60 @@ class Timer {
         this.seconds = seconds;
         this.interval = interval;
     }
+    setisActivated(isActivated) {
+        this.isActivated = isActivated;
+    }
+
+    getisActivated() {
+        return this.isActivated;
+    }
+
+    setHours(hours) {
+        this.hours = hours;
+    }
+
+    getHours() {
+        return this.hours;
+    }
+
+    setMinutes(minutes) {
+        this.minutes = minutes;
+    }
+    getMinutes() {
+        return this.minutes;
+    }
+
+    setSeconds(seconds) {
+        this.seconds = seconds;
+    }
+
+    getSeconds() {
+        return this.seconds;
+    }
+
+    setInterval() {
+        this.interval = interval;
+
+    }
+    getInterval() {
+        return this.interval;
+    }
+
+
+    decreaseTimer() {
+        this.seconds--
+
+        if (this.seconds == -1) {
+            this.minutes--;
+            this.seconds = 59;
+        }
+
+        if (this.minutes == -1) {
+            this.hours--;
+            this.minutes = 59;
+        }
+
+    }
 }
 
 function activarTemporizador() {
